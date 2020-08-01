@@ -1,0 +1,11 @@
+
+curl -XPUT 'http://localhost:9200/_snapshot/s3_repository?verify=false&pretty' -H "Content-Type: application/json" -d'
+{
+  "type": "s3",
+  "settings": {
+    "bucket": "mue-bucket-backup-elastic",
+    "region": "us-east-1",
+    "storage_class": "standard_ia",
+    "compress": "true"
+  }
+}'
